@@ -1,0 +1,6 @@
+let nome = 'João'
+let idade = '18'
+let peso = '52'
+let altura = '1.70'
+let cpf = '134.567.890-12'
+let rg = '32.345.789-3'
