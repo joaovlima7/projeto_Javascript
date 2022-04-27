@@ -1,0 +1,30 @@
+<main class="container">
+        <header>
+            <h1 class="ps-4 pt-4">Alteração de valores</h1>
+            <hr>
+        </header>
+
+        <script>
+            //Null
+            let valor = null
+
+            //Saída Antes
+            console.log(`Valor de variável antes: ${Valor}`)
+
+            //Atribuindo um valor
+            valor = 'Valor alterado!'
+
+            //Saída depois
+            console.log(`Valor da variável depois: ${valor}`)
+
+            //Atribuindo outro valor
+            valor = 100.50
+
+            //Saída depois
+            console.log(`Valor depois de outra operação: ${valor}`)
+
+            //Saída html
+            document.write(`<P class="ps-4 text-info">O valor da variável nesse momento é: ${valor}</p>`)
+        </script>
+
+    </main>
