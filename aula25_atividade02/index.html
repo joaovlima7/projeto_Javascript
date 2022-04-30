@@ -26,9 +26,9 @@
         <!--JavaScript-->
         <script>
             //Entrada de dados
-            let nome = prompt("Digite o nome do aluno: ")
-            let nota = prompt("Digite a nota do aluno: ")
-            let faltas = prompt("Digite o número de faltas do aluno: ")
+            nome = prompt("Digite o nome do aluno: ")
+            nota = prompt("Digite a nota do aluno: ")
+            faltas = prompt("Digite o número de faltas do aluno: ")
 
             //Impressão
             document.write(`Nome do aluno: ${nome}`)
@@ -36,8 +36,16 @@
             document.write(`Nota do aluno: ${nota}`)
             document.write('<br>')
             document.write(`Número de faltas: ${faltas}`)
+            document.write('<hr>')
 
-        
+           //Situação 
+            if (nota >= 7 && faltas <= 10) {
+                document.write(`Situação: Aprovado`)
+            } else {
+                document.write(`Situação: Reprovado`)
+            }
+
+            
         </script>
     </main>
 
