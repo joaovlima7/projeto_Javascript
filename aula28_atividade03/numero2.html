@@ -27,26 +27,50 @@
 <body>
 
     <main class="container">
+
+
         <header>
-            <h1>Atividade número 1</h1>
+            <h1>Atividade número 2</h1>
             <hr>
         </header>
 
         <!--JavaScript-->
         <script>
             //Entrada de dados
-            inteiro = prompt(`Digite um número inteiro: `)
+            numeroUm = prompt(`Digite o primeiro número: `)
+            numeroDois = prompt(`Digite o segundo número: `)
+            numeroTres = prompt(`Digite o terceiro número: `)
 
             //Saída
-            document.write(`<h4>O número que você digitou foi: ${inteiro}</h4>`)
-            document.write('<br>')
+            document.write(`<h4>Primeiro número: ${numeroUm}</h4><br><br>`)
+            document.write(`<h4>Segundo número: ${numeroDois}</h4><br><br>`)
+            document.write(`<h4>Terceiro número: ${numeroTres}</h4><br><br>`)
 
-            if (inteiro % 2 == 0){
-                document.write(`<h4>O número é: par</h4>`)
-            } else {
-                document.write(`<h4>O número é: impar</h4><hr>`)
+            //Casting
+            numeroUm = parseFloat(numeroUm)
+            numeroDois = parseFloat(numeroDois)
+            numeroTres = parseFloat(numeroTres)
+
+            //Maior número
+            if (numeroUm >= numeroDois && numeroUm >= numeroTres){
+                maior = numeroUm
+            } else if (numeroDois >= numeroUm && numeroDois >= numeroTres){
+                maior = numeroDois
+            } else if (numeroTres >= numeroUm && numeroTres >= numeroDois){
+                maior = numeroTres
             }
-            
+            document.write(`<h4>O maior número é: ${maior}</h4><br>`)
+
+            //Menor número
+            if (numeroUm <= numeroDois && numeroUm <= numeroTres){
+                menor = numeroUm
+            } else if (numeroDois <= numeroUm && numeroDois <= numeroTres){
+                menor = numeroDois
+            } else if (numeroTres <= numeroUm && numeroTres <= numeroDois){
+                menor = numeroTres
+            }
+            document.write(`<h4>O menor número é: ${menor}</h4><br><hr>`)
+
         </script>
 
         <a href="index.html">Voltar</a>
