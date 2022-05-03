@@ -12,6 +12,15 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Javascript</title>
 
+    <style>
+        body {
+            background-color: azure;
+        }
+        h1 {
+            color: green;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -30,42 +39,44 @@
                 <li class="display-6">Sabado</li>
                 <li class="display-6">Domingo</li>
             </ol>
+
+
         </header>
 
         <!--JavaScript-->
         <script>
-            let opcao = prompt('Escolha uma das camisas 1=Segunda || 2=Terça || 3=Quarta || 4=Quinta')
+            let opcao = prompt('Escolha uma dos dias 1=Segunda| 2=Terça| 3=Quarta| 4=Quinta| 5=sexta| 6=sabado| 7=domingo')
 
             switch (parseInt(opcao)){
                 case 1:
-                    document.write('<h5>Você escolheu Segunda!</h5>')
+                    document.write('<h5>Você escolheu Segunda!</h5><hr>')
                     break
 
                 case 2:
-                    document.write('<h5>Você escolheu Terça!</h5>')
+                    document.write('<h5>Você escolheu Terça!</h5><hr>')
                     break
 
                 case 3:
-                    document.write('<h5>Você escolheu Quarta!</h5>')
+                    document.write('<h5>Você escolheu Quarta!</h5><hr>')
                     break
 
                 case 4:
-                    document.write('<h5>Você escolheu Quinta</h5>')
+                    document.write('<h5>Você escolheu Quinta</h5><hr>')
                     break
 
                 case 5:
-                    document.write('<h5>Você escolheu Sexta</h5>')
+                    document.write('<h5>Você escolheu Sexta</h5><hr>')
                     break
 
                 case 6:
-                    document.write('<h5>Você escolheu Sabado</h5>')
+                    document.write('<h5>Você escolheu Sabado</h5><hr>')
                     break
 
                 case 7:
-                    document.write('<h5>Você escolheu Domingo</h5>')
+                    document.write('<h5>Você escolheu Domingo</h5><hr>')
                     break
                 default:
-                    document.write('<h5>Limite de escolhas ultrapassado!</h5><br>')
+                    document.write('<h5>Limite de escolhas ultrapassado!</h5><hr>')
 
             }
         </script>

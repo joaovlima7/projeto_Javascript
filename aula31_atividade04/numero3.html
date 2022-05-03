@@ -12,9 +12,101 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Javascript</title>
 
+    <style>
+        body {
+            background-color: azure;
+        }
+
+        h1 {
+            color: green;
+        }
+    </style>
+
 </head>
 
 <body>
+
+    <main class="container">
+        <header>
+            <h1>Atividade 04 - Número 3 - Switch</h1>
+            <hr>
+        </header>
+
+        <section>
+            <articler class="row">
+                
+                <script>
+                    //Declaração:
+                    resposta = ''
+
+                    //Variavel:
+                    let opcao = prompt('A)=1 Cálculo de número primo simples | B)=2 Cálculo de Massa corporal (imc) | C)=3 Velocidade média (Vm = E/T) | D)=4 Cinversão de temperatura °F para °C')
+
+                    //Casting:
+                    opcao = parseInt(opcao)
+
+                    switch (parseInt(opcao)) {
+                        case 1:
+                            document.write('<h1>Você escolheu a opção numero 1: </h1><h4> Cálculo de número primo simples </h4>')
+                            //Entrada:
+                            primo = prompt('Insira o número primo: ')
+                            //Casting:
+                            primo = parseFloat(primo)
+                            //Declaração:
+                            let n = 2
+                            if (primo == n) {
+                                document.write(`<h4>O número ${primo} é número primo !</h4><hr>`)
+                            } else if (primo % n == 0) {
+                                document.write(`<h4>O número ${primo} não é número primo !</h4><hr>`)
+                            } else { document.write(`<h4>O número ${primo} é número primo !</h4><hr>`) }
+                            break
+
+                        case 2:
+                            document.write('<h1>Você escolheu a opção numero 2: </h1><h4> Cálculo de Massa corporal (imc) </h4>')
+                            //Entrada:
+                            peso = prompt('Insira seu peso: ')
+                            altura = prompt('Insira sua altura: ')
+                            //Casting:
+                            peso = parseFloat(peso)
+                            altura = parseFloat(altura)
+                            // Declaração:
+                            imc = peso / (altura * altura)
+                            document.write(`<h4>Seu IMC e: ${imc}</h4><hr>`)
+                            break
+
+                        case 3:
+                            document.write('<h1>Você escolheu a opção numero 3: </h1><h4> Velocidade média (Vm = E/T) </h4>')
+                            //Entrada:
+                            e = prompt('Insira a quilometragem percorrida: ')
+                            t = prompt('Insira quanto tempo levou em horas: ')
+                            //Casting:
+                            e = parseFloat(e)
+                            t = parseFloat(t)
+                            // Declaração:
+                            vm = e / t
+                            document.write(`<h4>A velocidade media e de: ${vm}</h4><hr>`)
+                            break
+                        case 4:
+                            document.write('<h1>Você escolheu a opção numero 4: </h1><h4> Conversão de temperatura °F para °C </h4>')
+                            //Entrada:
+                            f = prompt('Insira a quantidade em Fahrenheit: ')
+                            //Casting:
+                            f = parseFloat(f)
+                            // Declaração:
+                            conversao = (f - 32) * 5 / 9
+                            document.write(`<h4>A conversão de temperatura de Fahrenheit ${f}°F para Celsius e : ${conversao} °C</h4><hr>`)
+                            break
+
+                        default:
+                            document.write('<h1>Fora do limite de opções!<h1><hr>')
+                    }
+
+                </script>
+
+                <a href="index.html">Voltar</a>
+            </articler>
+        </section>
+    </main>
 
 
 

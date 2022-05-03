@@ -12,6 +12,15 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Javascript</title>
 
+    <style>
+        body {
+            background-color: azure;
+        }
+        h1 {
+            color: green;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -31,35 +40,34 @@
 
         <!--JavaScript-->
         <script>
-            let opcao = prompt('Escolha uma das camisas 1=TWD || 2=LCP || 3=Marvel || 4=DC')
+            let opcao = prompt('Escolha uma das camisas 1=TWD| 2=LCP| 3=Marvel| 4=DC')
 
             switch (parseInt(opcao)){
                 case 1:
-                    document.write('<h5>Você escolheu a Camisa TWD!</h5>')
+                    document.write('<h5>Você escolheu a Camisa TWD!</h5><hr')
                     break
 
                 case 2:
-                    document.write('<h5>Você escolheu a Camisa LCP!</h5>')
+                    document.write('<h5>Você escolheu a Camisa LCP!</h5><hr>')
                     break
 
                 case 3:
-                    document.write('<h5>Você escolheu a Camisa Marvel!</h5>')
+                    document.write('<h5>Você escolheu a Camisa Marvel!</h5><hr>')
                     break
 
                 case 4:
-                    document.write('<h5>Você escolheu a Camisa DC!</h5>')
+                    document.write('<h5>Você escolheu a Camisa DC!</h5><hr>')
                     break
 
                 default:
-                    document.write('<h5>Limite de escolhas ultrapassado!</h5>')
+                    document.write('<h5>Limite de escolhas ultrapassado!</h5><hr>')
 
             }
         </script>
 
+        <a href="index.html">Voltar</a>
+
     </main>
-
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
