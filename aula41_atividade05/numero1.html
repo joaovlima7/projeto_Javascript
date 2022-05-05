@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Javascript</title>
+
+    <style>
+        body {
+            background-color: azure;
+        }
+        h1 {
+            color: green;
+        }
+        h4 {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>Atividade 05 - Funções - Número 1</h1>
+            <hr>
+            <h3>Soma e subtração</h3><br>
+            <h4>Exemplo de função com retorno</h4>
+        </header>
+
+        <script>
+            //Entrada
+            let valorUm = prompt('Digite o 1º valor: ')
+            let ValorDois = prompt('Digite o 2º valor: ')
+            let operacao = prompt('Digite uma operação: ')
+            document.write(`<h4>Operação escolhida: ${operacao}</h4>`)
+
+            //Casting
+            valorUm = parseFloat(valorUm)
+            ValorDois = parseFloat(ValorDois)
+
+            //Funções
+            function somar(valorUm, ValorDois) {
+                let soma = valorUm + ValorDois
+
+                //Retorna o resultado da operação
+                return soma
+            }
+
+            function subtrair(valorUm, ValorDois) {
+                let subtracao = valorUm - ValorDois
+
+                //Retorna o resultado da operação
+                return subtracao
+            }
+
+            if (operacao == 'soma') {
+                resultado = somar(valorUm, ValorDois)
+                document.write(`<h4>Resultado da operação: A soma dos valores é: ${resultado}</h4>`)
+            } else {
+                resultado = subtrair(valorUm, ValorDois)
+                document.write(`<h4>Resultado da operação: A subtração dos valores é: ${resultado}</h4>`)
+            }
+            document.write('<hr>')
+
+            
+
+        </script>
+        <a href="numero1.html">Consultar Novamente</a><br>
+        <a href="index.html">Voltar</a>
+
+    </main>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
