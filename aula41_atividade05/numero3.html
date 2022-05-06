@@ -16,6 +16,51 @@
 
 <body>
 
+    <main class="container">
+
+        <header>
+            <h1>Atividade 05 - Funções - Número 3</h1>
+            <hr>
+        </header>
+
+        <script>
+             //Entrada
+             let valorUm = prompt('Digite o 1º valor: ')
+            let ValorDois = prompt('Digite o 2º valor: ')
+            let operacao = prompt('Digite uma operação: ')
+            document.write(`<h4>Operação escolhida: ${operacao}</h4>`)
+
+            //Casting
+            valorUm = parseFloat(valorUm)
+            ValorDois = parseFloat(ValorDois)
+
+            //Funções
+            function multiplicar(valorUm, ValorDois) {
+                let produto = valorUm * ValorDois
+
+                //Retorna o resultado da operação
+                return produto
+            }
+
+            function dividir(valorUm, ValorDois) {
+                let divisao = valorUm / ValorDois
+
+                //Retorna o resultado da operação
+                return divisao
+            }
+
+            if (operacao == 'produto') {
+                resultado = multiplicar(valorUm, ValorDois)
+                document.write(`<h4>Resultado da operação: A multiplicação dos valores é: ${resultado}</h4>`)
+            } else {
+                resultado = dividir(valorUm, ValorDois)
+                document.write(`<h4>Resultado da operação: A divisão dos valores é: ${resultado}</h4>`)
+            }
+            document.write('<hr>')
+        </script>
+
+    </main>
+
 
 
 

@@ -12,9 +12,71 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Javascript</title>
 
+    <style>
+        body {
+            background-color: azure;
+        }
+        h1 {
+            color: green;
+        }
+    </style>
+    
+
 </head>
 
 <body>
+
+    <main class="container">
+
+        <header>
+            <h1>Atividade 05 - Funções - Número 2</h1>
+            <hr>
+        </header>
+
+        <script>
+            //Entrada de dados
+            let notaUm = prompt('Digite sua primeira nota: ')
+            let notaDois = prompt('Digite sua segunda nota: ')
+            let notaTres = prompt('Digite sua terceira nota: ')
+            let notaQuatro = prompt('Digite sua quarta nota: ')
+
+            document.write(`<h4>Suas notas são: ${notaUm}, ${notaDois}, 
+            ${notaTres} e ${notaQuatro}</h4>`)
+
+            //Casting
+            notaUm = parseFloat(notaUm)
+            notaDois = parseFloat(notaDois)
+            notaTres = parseFloat(notaTres)
+            notaQuatro = parseFloat(notaQuatro)
+
+            function fazerMedia(notaUm, notaDois, notaTres, notaQuatro) {
+                let media = (notaUm + notaDois + notaTres + notaQuatro) / 4
+
+                //Retorna o valor 
+                return media
+            }
+
+            resultado = fazerMedia(notaUm, notaDois, notaTres, notaQuatro)
+
+            if (resultado >= 7) {
+                situacao = "<h4>Situação do Aluno: Aprovado</h4>"
+            } else if (resultado > 5 && resultado < 7) {
+               situacao = "<h4>Situação do Aluno: Recuperação</h4>"
+            } else {
+                situacao = "<h4>Situação do Aluno: Reprovado</h4>"
+            } 
+
+            document.write(situacao)
+            
+
+
+        </script>
+        <hr>
+
+        <a href="numero2.html">Consultar novament</a><br>
+        <a href="index.html">Voltar</a><br>
+
+    </main>
 
 
 
