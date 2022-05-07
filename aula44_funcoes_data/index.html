@@ -15,37 +15,50 @@
 </head>
 
 <body>
-    <main class="container">
+
+    <main class="p-4">
         <header>
-            <h1>Atividade String</h1>
-            <hr>
-            <p>1 -A quantidade de caracteres dessa frase</p>
-            <p>2 -A primeira posição do caractere 'a'
-            <p>3 -Substitua a frase que você digitou por outra</p>
-            <p>4 - Mostre os 10 primeiro caracteres de sua frase</p>  
-            <p>5 -Formate sua frase em caixa alta</p>
-            <p>6 -Formate sua frase em caixa baixa</p> 
-            <p>7 -Sair</p>
+            <h1>Funções para Datas</h1>
             <hr>
         </header>
 
         <script>
-           frase = prompt('Digite uma frase: ')
+            //Datas
+            //Criação de um objeto para data, pois não podemos trabalhar diretamente com elas
+            var data = new Date()
 
-           document.write(`Frase: ${frase}`)
-        </script>
-        <script>
-            let opcao = prompt('Escolha as opções de 1 a 7: ')
+            //Recuperando o dia
+            dia = data.getDate()
 
-            caractere = frase.length
+            //Data completa
+            document.write(`<p>${data.toString()}</p>`)
 
-            switch (opcao) {
-                case 1:
-                    document.write()
-            }
+            //Recuperando o Mês
+            //Meses vão de 0 a 11, precisamos contar mais 1
+            //Para janeiro ser o mês 1
+            mes = data.getMonth() + 1
+
+            //Recuperando o Ano
+            ano = data.getFullYear()
+
+            //Saída formatada
+            document.write(`<p> Hoje é ${dia}/${mes}/${ano}</p>`)
+
+            //Recuperando as horas
+            hora = data.getHours()
+            //Recuperando os minutos
+            minutos = data.getMinutes()
+            //Recuperando os segundos
+            segundos = data.getSeconds()
+
+            //Saída formatada
+            document.write(`<p> Neste momento são ${hora}:${minutos}:${segundos}</p>`)
         </script>
 
     </main>
+
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
