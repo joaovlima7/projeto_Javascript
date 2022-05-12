@@ -23,7 +23,7 @@
         function evento3() {
             alert('Evento onkeypress disparado!')
         }
-        
+
     </script>
 
 </head>
@@ -36,9 +36,9 @@
             <h1 class="display-5 ps-4 pt-4">Esrutura de controle: for</h1>
             <hr>
 
-            <!---->
-            <!---->
-            <!---->
+            <!--ONKEYDOWN: É acionado quando pressiono qualquer tecla-->
+            <!--ONKEYUP: É acionado quando uma tecla é liberada-->
+            <!--ONKEYPRESS: É acionado quando mantenho a tecla pressionada (a tecla tem que ser um caractere)-->
 
             <input onkeydown="evento1()" type="text" class="bg-primary">
             <br>
@@ -46,6 +46,12 @@
             <br>
             <input onkeypress="evento3()" type="text" class="bg-warning">
         </header>
+
+        <!--
+            Consultar a socumentação W3C para se informa de todos
+            os eventos e seus respectivos elementos, pois nem todo
+            elemento tem suportar a um evento específico
+        -->
 
 
     </main>
