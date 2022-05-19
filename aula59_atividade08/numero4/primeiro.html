@@ -19,8 +19,10 @@
     <main class="container">
 
         <header>
-            <h1>Cálculos matemáticos básicos</h1>
+            <h1>portal matemático</h1>
             <hr>
+            <h4>Cálculos básicos</h4>
+
         </header>
 
         <input type="text" id="valorUm" placeholder="Digite o primeiro valor">
@@ -39,19 +41,167 @@
             function somar() {
                 //console.log('testando')
 
-                n1 = document.getElementById('valorUm').value
+                n1 = parseFloat(document.getElementById('valorUm').value)
                 //console.log(n1)
 
-                n2 = document.getElementById('valorDois').value
+                n2 = parseFloat(document.getElementById('valorDois').value)
                 //console.log(n2)
 
                 resultado = n1 + n2
-                console.log(resultado)
-                
-                
+
+                //Resultado
+                document.getElementById('igual').value = resultado
+
             }
 
         </script>
+
+        <button onclick="subtrair()" class="btn btn-warning">
+            subtrair
+        </button>
+
+        <script>
+
+            function subtrair() {
+
+                n1 = parseFloat(document.getElementById('valorUm').value)
+                n2 = parseFloat(document.getElementById('valorDois').value)
+
+                //Operação
+                resultado = n1 - n2
+
+                //Resultado
+                document.getElementById('igual').value = resultado
+            }
+
+        </script>
+
+        <button onclick="multiplicar()" class="btn btn-danger">
+            multiplicar
+        </button>
+
+        <script>
+
+            function multiplicar() {
+
+                n1 = parseFloat(document.getElementById('valorUm').value)
+                n2 = parseFloat(document.getElementById('valorDois').value)
+
+                //Operação
+                resultado = n1 * n2
+
+                //Resultado
+                document.getElementById('igual').value = resultado
+            }
+        </script>
+
+        <button onclick="dividir()" class="btn btn-success">
+            dividir
+        </button>
+
+        <script>
+
+            function dividir() {
+
+                n1 = parseFloat(document.getElementById('valorUm').value)
+                n2 = parseFloat(document.getElementById('valorDois').value)
+
+                //Operação
+                resultado = n1 / n2
+
+                //Resultado
+                document.getElementById('igual').value = resultado
+            }
+        </script>
+        <hr>
+
+        <header>
+            <h4>Equação do 2º Grau</h4>
+        </header>
+
+        <input type="text" id="num1">
+        <br><br>
+        <input type="text" id="num2">
+        <br><br>
+        <input type="text" id="num3">
+        <br><br>
+        <h6>Raiz 1</h6>
+        <input type="text" id="raizUm"><br><br>
+        <h6>Raiz 2</h6>
+        <input type="text" id="raizDois"><br><br>
+
+        <button onclick="equacao()" class="btn btn-info">
+            Calcular raizes
+        </button>
+
+        <script>
+
+            function equacao() {
+
+                a = parseFloat(document.getElementById('num1').value)
+                b = parseFloat(document.getElementById('num2').value)
+                c = parseFloat(document.getElementById('num3').value)
+
+                //Operação
+                delta = (b * b) - 4 * a * c
+                raiz1 = (- b + Math.sqrt(delta)) / (2 * a)
+                raiz2 = (- b - Math.sqrt(delta)) / (2 * a)
+
+
+
+                //Resultado
+                console.log(raiz1)
+                console.log(raiz2)
+                document.getElementById('raizUm').value = raiz1
+                document.getElementById('raizDois').value = raiz2
+
+
+            }
+        </script>
+        <hr>
+
+        <header>
+            <h4>Logaritimo</h4>
+        </header>
+
+        <input type="text" id="valor1" placeholder="valor de x">
+        <br><br>
+        <input type="text" id="valor2" placeholder="Valor de y">
+        <br><br>
+        <h6>Resultado</h6>
+        <input type="text" id="resultado"><br><br>
+
+        <button onclick="logaritimo()" class="btn  btn-info">
+            calcular
+        </button>
+
+        <script>
+
+        </script>
+        <hr>
+
+        <header>
+            <h4>Fatorial</h4>
+        </header>
+
+        <input type="text" id="numero1" placeholder="valor de n">
+        <br><br>
+        <h6>Resultado</h6>
+        <input type="text" id="resultado"><br><br>
+
+        <button onclick="fatorial()" class="btn btn-info">
+            calcular
+        </button>
+
+        <script>
+            
+        </script>
+
+
+
+
+
+
 
 
     </main>
