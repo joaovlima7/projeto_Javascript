@@ -25,15 +25,17 @@
 
         </header>
 
-        <input type="text" id="valorUm" placeholder="Digite o primeiro valor">
+        <input type="text" id="valorUm" placeholder="Digite um valor">
         <br><br>
-        <input type="text" id="valorDois" placeholder="Digite o segundo valor">
+        <input type="text" id="valorDois" placeholder="Digite um valor">
         <br><br>
         <h6>Resultado</h6>
-        <input type="text" id="igual"><br><br>
+        <input type="text" id="igual" disabled><br><br>
 
         <button onclick="somar()" class="btn btn-info">
             somar
+        </button>
+
         </button>
 
         <script>
@@ -112,6 +114,7 @@
                 //Resultado
                 document.getElementById('igual').value = resultado
             }
+
         </script>
         <hr>
 
@@ -119,16 +122,16 @@
             <h4>Equação do 2º Grau</h4>
         </header>
 
-        <input type="text" id="num1">
+        <input type="text" id="num1" placeholder="Digite um valor">
         <br><br>
-        <input type="text" id="num2">
+        <input type="text" id="num2" placeholder="Digite um valor">
         <br><br>
-        <input type="text" id="num3">
+        <input type="text" id="num3" placeholder="Digite um valor">
         <br><br>
         <h6>Raiz 1</h6>
-        <input type="text" id="raizUm"><br><br>
+        <input type="text" id="raizUm" disabled><br><br>
         <h6>Raiz 2</h6>
-        <input type="text" id="raizDois"><br><br>
+        <input type="text" id="raizDois" disabled><br><br>
 
         <button onclick="equacao()" class="btn btn-info">
             Calcular raizes
@@ -138,9 +141,12 @@
 
             function equacao() {
 
-                a = parseFloat(document.getElementById('num1').value)
-                b = parseFloat(document.getElementById('num2').value)
-                c = parseFloat(document.getElementById('num3').value)
+                a = document.getElementById('num1').value
+                console.log(a)
+                b = document.getElementById('num2').value
+                console.log(b)
+                c = document.getElementById('num3').value
+                console.log(c)
 
                 //Operação
                 delta = (b * b) - 4 * a * c
@@ -166,16 +172,29 @@
 
         <input type="text" id="valor1" placeholder="valor de x">
         <br><br>
-        <input type="text" id="valor2" placeholder="Valor de y">
-        <br><br>
+
         <h6>Resultado</h6>
-        <input type="text" id="resultado"><br><br>
+        <input type="text" id="log" disabled><br><br>
 
         <button onclick="logaritimo()" class="btn  btn-info">
             calcular
         </button>
 
         <script>
+
+            function logaritimo() {
+
+
+                let logaritimo = document.getElementById('valor1').value
+
+                //Operação
+                resultado = Math.log10(logaritimo)
+                
+                //Resultado
+                document.getElementById('log').value = resultado
+                console.log(resultado)
+
+            }
 
         </script>
         <hr>
@@ -187,15 +206,58 @@
         <input type="text" id="numero1" placeholder="valor de n">
         <br><br>
         <h6>Resultado</h6>
-        <input type="text" id="resultado"><br><br>
+        <input type="text" id="resultado" disabled><br><br>
 
         <button onclick="fatorial()" class="btn btn-info">
             calcular
         </button>
 
         <script>
-            
+
+            function fatorial() {
+
+                let n = document.getElementById('numero1').value
+
+                //Operação
+                resultado = n * (n - 1) * (n - 2)
+
+                //Resultado
+                document.getElementById('resultado').value = resultado
+                console.log(resultado)
+            }
+
         </script>
+        <hr>
+
+        <header>
+            <h4>Cálculo trigonométrico(tangente)</h4>
+        </header>
+
+        <input type="text" id="valor" placeholder="Digite um valor">
+        <br><br>
+        <h6>Resultado</h6>
+        <input type="text" id="resposta" disabled><br><br>
+
+        <button onclick="tangente()" class="btn btn-info">
+            calcular
+        </button>
+
+        <script>
+
+            function tangente() {
+
+                let tangente = document.getElementById('valor').value
+
+                //Operação
+                resultado = Math.tan(tangente)
+
+                //Resultado 
+                document.getElementById('resposta').value = resultado
+            }
+
+        </script>
+
+
 
 
 
